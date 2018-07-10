@@ -83,11 +83,11 @@ nav h1 a {
   color: #fff;
   font-size: 1rem;
   font-weight: 200;
-  letter-spacing: 11px;
+  letter-spacing: 0.6rem;
   text-transform: uppercase;
 }
 #breadcrumb {
-    padding: 10px 15px;
+    padding: 0.6rem 1rem;
     list-style: none;
     background-color: #eee;
     font-size: 17px;
@@ -160,7 +160,7 @@ nav h1 a {
   margin: 0;
   padding: 0.5rem;
   display: flex;
-  flex-direction: rows;
+  flex-direction: row;
   flex-wrap: wrap;
 
 }
@@ -173,7 +173,6 @@ nav h1 a {
   font-family: Arial,sans-serif;
   margin: 1rem 0;
   min-height: 380px;
-  /* padding: 0 30px 25px; */
   line-height: 1.2rem;
   width: 95vw;
 }
@@ -191,7 +190,7 @@ nav h1 a {
 .restaurant-card div {
   padding: 0 1rem 1rem 1rem
 }
-.restaurant-card h1 {
+.restaurant-card h3 {
   color: #f18200;
   /* font-family: Arial,sans-serif; */
   font-family: Roboto,sans-serif;
@@ -204,7 +203,7 @@ nav h1 a {
 }
 #restaurants-list p {
   margin: 0;
-  font-size: 11pt;
+  font-size: 1rem;
   color: #777777;
   letter-spacing: 0.1rem;
 }
@@ -246,6 +245,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
+  width: 100%;
 }
 #restaurant-name {
   color: #f18200;
@@ -272,7 +272,7 @@ nav h1 a {
   font-weight: 300;
   letter-spacing: 10px;
   margin: 0 0 1rem;
-  padding: 2px 0;
+  padding: 0.3rem;
   text-align: center;
   text-transform: uppercase;
 }
@@ -308,20 +308,20 @@ nav h1 a {
 }
 #reviews-list {
   margin: 0;
-  padding: 1rem 1rem 5rem;
+  padding: 1rem 1rem 4rem;
 }
 #reviews-list li {
   background-color: #fff;
     border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
-  margin: 0 0 30px;
+  margin: 0 0 1.5rem;
   overflow: hidden;
   padding: 1rem;
   position: relative;
 }
 #reviews-list li p {
-  margin: 0 0 10px;
+  margin: 0 0 1rem;
 }
 
 #reviews-list .name {
@@ -370,34 +370,17 @@ color: #373738
 	.restaurants-filter {
 		height: 4.75rem;
 		flex-direction: column;
-	}
+  }
 	.restaurants-filter select {
 		width: 90%; /* fallback if needed */
 		width: calc(100% - 1em);
 	}
-  .restaurant-details {
-    flex-direction: column;
-  }
-  .restaurant-details-card {
-    width: 100%;
-    order: 2;
-  }
-  .restaurant-details-map {
-    width: 100%;
-    height: 30vh;
-    order: 1;
-  }
-  .footer-content {
-    font-size: 0.55rem; /* from 0.75rem */
-    font-weight: 300;
-    letter-spacing: 0.075em; /* from 0.05em */
-  }
 }
 
 /*
  * 480 to 599 pixels, breakpoint at 600 pixels = 37.5rem
  */
-@media screen and (min-width: 30rem) and (max-width: 37.4375rem) {
+@media screen and (max-width: 600px) {
   .wrapper {
     max-width: 37.4375rem;
   }
@@ -407,31 +390,20 @@ color: #373738
   .restaurant-card {
     margin: 1rem;
   }
-  .restaurant-details {
-    flex-direction: column;
-  }
-  .restaurant-details-card {
-    width: 100%;
-    order: 2;
-  }
-  .restaurant-details-map {
-    width: 100%;
-    height: 35vh;
-    order: 1;
-  }
-  .footer-content {
-    font-size: 0.65rem; /* from 0.75rem */
-    font-weight: 300;
-    letter-spacing: 0.075em; /* from 0.05em */
+  .filter-options {
+    justify-content: flex-end;
   }
 }
 
 /*
  * 600 to 839 pixels, breakpoint at 840 pixels = 52.5rem
  */
-@media screen and (min-width: 37.5rem) and (max-width: 52.4375rem) {
+@media screen and (min-width: 600px) and (max-width: 839px) {
   .wrapper {
     max-width: 52.4375rem;
+  }
+	.filter-options {
+    justify-content: flex-end;
   }
 	.restaurants-filter select {
 		width: calc(45% - 1em);
@@ -443,60 +415,107 @@ color: #373738
   }
   .restaurant-card {
     width: 45%; /* 2 cards */
-  }
-  .review-card {
-    width: 45%; /* 2 cards */
+    margin: 0.5rem 0.5rem;
   }
 }
 
 /*
  * 840 to 959 pixels, breakpoint at 960 pixels = 60rem
  */
-@media screen and (min-width: 52.5rem) and (max-width: 59.9375rem) {
+@media screen and (min-width: 840px) and (max-width: 959px) {
   .wrapper {
     max-width: 59.9375rem;
   }
-	.restaurants-filter select {
-		width: calc(40% - 1em);
+	.filter-options {
+    display: flex;
+    justify-content: space-around;
+  }
+	.filter-options h2 {
+    letter-spacing: 0.8rem;
+  }
+	.filter-options select {
+		width: calc(30% - 1em);
 	}
   .restaurant-card {
     width: 45%; /* 2 cards */
+    margin: 1rem 1rem;
+    width: 44%;
+    margin: 1rem;
   }
-  .review-card {
+  .card-text {
+    padding: 1.4rem;
+  }
+  #reviews-list li.review-card {
     width: 45%; /* 2 cards */
+    margin: 0.5rem 0.5rem;
+  }
+  #reviews-list {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 1rem 4rem;
   }
 }
 
 /*
  * 960 to 1279 pixels, breakpoint at 1280 pixels = 80rem
  */
-@media screen and (min-width: 60rem) and (max-width: 79.9375rem) {
+@media screen and (min-width: 960px) and (max-width: 1279px) {
   .wrapper {
     max-width: 79.9375rem;
   }
-	.restaurants-filter select {
+  .filter-options {
+    justify-content: flex-end;
+  }
+  .filter-options h2 {
+    letter-spacing: 0.8rem;
+  }
+	.filter-options select {
 		width: calc(35% - 1em);
 	}
   .restaurant-card {
+    width: 30%;
+    margin: 0.5rem;
+  }
+  #reviews-list li.review-card {
+    margin: 0.5rem 0.5rem;
     width: 30%; /* 3 cards */
   }
-  .review-card {
-    width: 30%; /* 3 cards */
+  #reviews-list {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 1rem 4rem;
   }
 }
 
 /*
  * 1280 pixels / 80rem and beyond
  */
-@media screen and (min-width: 80rem) {
-	.restaurants-filter select {
-		width: calc(30% - 1em);
-	}
-  .restaurant-card {
-    width: 22.5%; /* 4 cards */
+@media screen and (min-width: 1280px) {
+  li.restaurant-card {
+    width: 19rem; /* 4 cards */
+    margin: 0.5rem;
   }
-  .restaurant-card-table-content {
-    font-size: 0.925rem;
+  .filter-options {
+    justify-content: flex-end;
+  }
+  .filter-options h2 {
+    letter-spacing: 1rem;
+  }
+  .filter-options select{
+    display: flex;
+    width: 30%;
+  }
+  #reviews-list li.review-card {
+    margin: 0.5rem 0.5rem;
+    width: 30%; /* 3 cards */
+  }
+  #reviews-list {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 1rem 4rem;
   }
   .review-card {
     width: 30%; /* 3 cards */
