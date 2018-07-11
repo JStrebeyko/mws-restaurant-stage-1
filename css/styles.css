@@ -416,6 +416,10 @@ color: #373738
     width: 45%; /* 2 cards */
     margin: 0.5rem 0.5rem;
   }
+  .restaurant-visual img {
+    object-fit: cover;
+    max-height: 20rem;
+  }
 }
 
 /*
@@ -461,8 +465,12 @@ color: #373738
   }
   .restaurant-visual {
     width: 45%;
-    max-width: 23rem;
   }
+  .restaurant-visual img {
+    object-fit: cover;
+    max-height: 15rem;
+  }
+
   .restaurant-details {
     width: 45%;
     margin-left: 2rem;
@@ -506,8 +514,12 @@ color: #373738
   }
   .restaurant-visual {
     width: 45%;
-    max-width: 30rem;
   }
+  .restaurant-visual img {
+    object-fit: cover;
+    max-height: 17rem;
+  }
+
   .restaurant-details {
     width: 45%;
     align-items: center;
@@ -553,7 +565,10 @@ color: #373738
   }
   .restaurant-visual {
     width: 45%;
-    max-width: 40rem;
+  }
+  .restaurant-visual img {
+    object-fit: cover;
+    max-height: 20rem;
   }
   .restaurant-details {
     width: 45%;

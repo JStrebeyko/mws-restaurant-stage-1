@@ -9,7 +9,7 @@ if (workbox) {
 workbox.precaching.precacheAndRoute([
   {
     "url": "css/styles.css",
-    "revision": "41491bc5d2c0cc81a1448282c02318c1"
+    "revision": "5ff7edf46dfd297f10d32f6a1ffae8a3"
   },
   {
     "url": "data/restaurants.json",
@@ -57,7 +57,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "8d1d9c3c52ecdd409cf76d9bc05a9145"
+    "revision": "48852f3780cbd3867e8a83e62cec5dc4"
   },
   {
     "url": "js/dbhelper.js",
