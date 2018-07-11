@@ -13,7 +13,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "data/restaurants.json",
-    "revision": "78105c33fbdc0994a3d4e7b76982bdff"
+    "revision": "6be0516c4b6fa5d7e8a48032de6694a4"
   },
   {
     "url": "img/1.jpg",
@@ -69,7 +69,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "js/restaurant_info.js",
-    "revision": "bb70c715afc94d4973d3b75000ac3961"
+    "revision": "b43402593cb64b136ee0c673488224c9"
   },
   {
     "url": "restaurant.html",
@@ -77,10 +77,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "sw.js",
-    "revision": "d858ef308bb597a57a931784dc4f1cfc"
+    "revision": "fc26527d0d0f43997d5afba9732f760d"
   },
   {
     "url": "workbox-config.js",
     "revision": "7f559cc949f2166e3fcc055e6101a6f3"
   }
 ]);
+// I learned about the Workbox toolset from this fellow student: https://github.com/jsoetens/udacity-nanodegree-mws/tree/d0806812cb40255e2ef3cd418f243db8b947379c/mws-project-1, then implemented it myself.

@@ -7,3 +7,4 @@ if (workbox) {
 }
 
 workbox.precaching.precacheAndRoute([]);
+// I learned about the Workbox toolset from this fellow student: https://github.com/jsoetens/udacity-nanodegree-mws/tree/d0806812cb40255e2ef3cd418f243db8b947379c/mws-project-1, then implemented it myself.
